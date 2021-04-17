@@ -1,7 +1,6 @@
 # Template for TypeScript + MongoDB + Express API
 
-![TS Logo](https://miro.medium.com/max/816/1*TpbxEQy4ckB-g31PwUQPlg.png
-)
+<img src="https://miro.medium.com/max/816/1*TpbxEQy4ckB-g31PwUQPlg.png" width="100" height="100">
 
 Code   | Function
 --------- | ------
