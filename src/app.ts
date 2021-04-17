@@ -14,16 +14,16 @@ class App {
     this.database();
   }
 
-  public middlewares(): void {
+  private middlewares(): void {
     this.express.use(cors());
     this.express.use(express.json());
   }
 
-  public routes(): void {
+  private routes(): void {
     this.express.use("/api", router);
   }
 
-  public database(): void {
+  private database(): void {
     mongoose
       .connect(process.env.MONGODB_URI, {
         useFindAndModify: false,
@@ -31,7 +31,8 @@ class App {
         useUnifiedTopology: true,
         useNewUrlParser: true,
       })
-      .then(() => console.log("Connected to database."));
+      .then(() => console.log("Connected to database."))
+      .catch(() => console.warn("Not Connected to database, verify .env."))
   }
 }
 
